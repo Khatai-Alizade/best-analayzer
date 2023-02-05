@@ -66,6 +66,8 @@ public class InsertMySQL {
 	stmt.setString(9, Parser.oll.getProxyResponseContentType());
 	
 	stmt.execute();
+        
+        //melumatlar dolduruldu
 	
 		
 		
