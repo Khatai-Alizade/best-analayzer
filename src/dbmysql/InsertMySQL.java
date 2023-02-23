@@ -6,6 +6,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import util.Connections;
 import util.Parser;
+import static util.Parser.oll;
 import util.oneLineLog;
 
 public class InsertMySQL {
@@ -40,14 +41,11 @@ public class InsertMySQL {
 		statement.executeUpdate(sql1);
 	
 	}
-	
-	
+		
 	public static void insertTable() throws SQLException {
 		
-		
-		
 		PreparedStatement stmt = c.prepareStatement(
-				"INSERT INTO `Squid_Proxy_Server`.`AA1` "
+				"INSERT INTO `Squid_Proxy_Server`.`AA3` "
 				+ "( `clientRequestDate`, `reguestProsessingTime`, "
 				+ "`IP`, `cacheResultCode`, `contentGatewayLengt`, "
 				+ "`clientRequestMethod`, `clientUserName`, "
@@ -55,21 +53,19 @@ public class InsertMySQL {
 				+ "VALUES"
 				+ " ( ?, ?, ?, ?, ?, ?, ?, ?, ?);");
 	
-	stmt.setString(1, Parser.oll.getClientRequestDate());
-	stmt.setString(2, Parser.oll.getReguestProsessingTime());
-	stmt.setString(3, Parser.oll.getIP());
-	stmt.setString(4, Parser.oll.getCacheResultCode() );
-	stmt.setString(5, Parser.oll.getContentGatewayWhitBayt());
-	stmt.setString(6, Parser.oll.getClientRequestMethod());
-	stmt.setString(7, Parser.oll.getClientUserName() );
-	stmt.setString(8, Parser.oll.getServerName());
-	stmt.setString(9, Parser.oll.getProxyResponseContentType());
+	stmt.setString(1, oll.getClientRequestDate());
+	stmt.setString(2, oll.getReguestProsessingTime());
+	stmt.setString(3, oll.getIP());
+	stmt.setString(4, oll.getCacheResultCode() );
+	stmt.setString(5, oll.getContentGatewayWhitBayt());
+	stmt.setString(6, oll.getClientRequestMethod());
+	stmt.setString(7, oll.getClientUserName() );
+	stmt.setString(8, oll.getServerName());
+	stmt.setString(9, oll.getProxyResponseContentType());
 	
 	stmt.execute();
         
         //melumatlar dolduruldu
-	
-		
 		
 	}
 

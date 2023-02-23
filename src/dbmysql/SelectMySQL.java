@@ -129,7 +129,5 @@ public class SelectMySQL {
 		}
 	}
 
-    public SelectMySQL() {
-        Arrays.asList("sup1", "sup2", "sup3");
-    }
+  
 }

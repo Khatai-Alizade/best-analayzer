@@ -63,7 +63,7 @@ public  class Connections {
 
 	//For conncet to log file(s)
 	public static BufferedReader connectLogFile(String filePath) throws FileNotFoundException {
-		
+		//"/home/adminx/Desktop/logs/Java/Squid logs/access-2015-12-04.log"
 		FileReader fr = new FileReader(filePath);
 		 bufferReader = new BufferedReader(fr);
 
