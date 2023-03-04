@@ -1,5 +1,7 @@
 package util;
 
+import dbmysql.InsertMySQL;
+import static dbmysql.InsertMySQL.showTableInserd;
 import java.io.IOException;
 import java.sql.SQLException;
 import java.text.DateFormat;
@@ -18,26 +20,14 @@ public class Parser {
 
         connection.connectLogFile(filePath);
 
-        int i = 0;
         while (connection.bufferReader.ready()) {
-            i++;
-            oll.oneline = connection.bufferReader.readLine();
+               oll.oneline = connection.bufferReader.readLine();
 
             tenPieces(oll.oneline);
             timeSampUTC(oll.timeStampUTC);
             trimHostname(oll.proxyHierarchyRoute);
-
-            MainForm.InsertTextAera_Main.append("\n"
-                           + oll.clientRequestDate + "   "
-                           + oll.clientRequestTime + "   "
-                           + oll.IP + "   "
-                           + oll.cacheResultCode + "    "
-                           + oll.contentGatewayLengt + "    "
-                           + oll.clientRequestMethod + "    "
-                           + oll.clientUserName + "    "
-                           + oll.serverName);
-
-            //InsertMySQL.insertTable();
+            showTableInserd();
+            InsertMySQL.insertTable();
         }
     }
 
@@ -82,4 +72,9 @@ public class Parser {
             oll.serverName = parts[2];
         }
     }
+    
+    
+    
+    
+    
 }

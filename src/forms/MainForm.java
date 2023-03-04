@@ -42,12 +42,17 @@ public class MainForm extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         InsertTextAera_Main = new javax.swing.JTextArea();
         jButton2 = new javax.swing.JButton();
+        jComboBox1 = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("SPS Log File Analizator ");
+        setBackground(new java.awt.Color(51, 51, 51));
         setBounds(new java.awt.Rectangle(100, 100, 0, 0));
+        setForeground(new java.awt.Color(51, 51, 51));
 
-        jPanel3.setBackground(new java.awt.Color(51, 102, 255));
+        jTabbedPane2.setFont(new java.awt.Font("Loma", 0, 21)); // NOI18N
+
+        jPanel3.setBackground(new java.awt.Color(51, 51, 51));
 
         GeneralData.setText("General  Database");
         GeneralData.addActionListener(new java.awt.event.ActionListener() {
@@ -56,8 +61,8 @@ public class MainForm extends javax.swing.JFrame {
             }
         });
 
-        textArea1.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        textArea1.setName(""); // NOI18N
+        textArea1.setFont(new java.awt.Font("Dialog", 1, 14));
+        textArea1.setName("");
 
         jLabel1.setFont(new java.awt.Font("Liberation Sans", 0, 19)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
@@ -76,7 +81,7 @@ public class MainForm extends javax.swing.JFrame {
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addComponent(textArea1, javax.swing.GroupLayout.DEFAULT_SIZE, 733, Short.MAX_VALUE)
+                .addComponent(textArea1, javax.swing.GroupLayout.DEFAULT_SIZE, 769, Short.MAX_VALUE)
                 .addGap(19, 19, 19)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jDateChooser2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -92,20 +97,20 @@ public class MainForm extends javax.swing.JFrame {
                 .addGap(21, 21, 21)
                 .addComponent(GeneralData, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 38, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jDateChooser2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jDateChooser2, javax.swing.GroupLayout.DEFAULT_SIZE, 39, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
-                .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 41, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jDateChooser1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jDateChooser1, javax.swing.GroupLayout.DEFAULT_SIZE, 39, Short.MAX_VALUE)
                 .addGap(363, 363, 363))
             .addComponent(textArea1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         jTabbedPane2.addTab("General", jPanel3);
 
-        jPanel1.setBackground(new java.awt.Color(0, 102, 153));
+        jPanel1.setBackground(new java.awt.Color(51, 51, 51));
         jPanel1.setForeground(new java.awt.Color(0, 102, 153));
 
         jTextField1.setText("File Path");
@@ -135,19 +140,27 @@ public class MainForm extends javax.swing.JFrame {
             }
         });
 
+        jComboBox1.setBackground(new java.awt.Color(102, 102, 102));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "AZ", "RUS", "EN" }));
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 710, Short.MAX_VALUE)
-                .addGap(18, 18, 18)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 746, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(64, 64, 64)
-                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 301, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(64, 64, 64)
+                                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 301, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(49, 49, 49)
+                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(21, 21, 21))
         );
         jPanel1Layout.setVerticalGroup(
@@ -159,7 +172,9 @@ public class MainForm extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
                     .addComponent(jButton2))
-                .addGap(537, 537, 537))
+                .addGap(154, 154, 154)
+                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(345, Short.MAX_VALUE))
             .addComponent(jScrollPane1)
         );
 
@@ -171,8 +186,7 @@ public class MainForm extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jTabbedPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 1050, Short.MAX_VALUE)
-                .addContainerGap())
+                .addComponent(jTabbedPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 1086, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -182,43 +196,11 @@ public class MainForm extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void GeneralDataActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GeneralDataActionPerformed
-
-        //GeneralData.setText("Test Data"); Bu sistemin dilini dəyismək
-        //ucun istifadə edəcəyin bir yontəmdir.
-        //System.out.println(jTextField1.getText());
-        //Parser.lines(jTextField1.getText());
-        MyThread thread = new MyThread(() -> {
-            sf.GeneralButton();
-        });
-        Thread t1 = new Thread(thread);
-        t1.start();
-    }//GEN-LAST:event_GeneralDataActionPerformed
-
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-
-        JFileChooser file = new JFileChooser();
-        file.setCurrentDirectory(new File("user.dir"));
-
-        FileNameExtensionFilter filter = new FileNameExtensionFilter("log", "txt");
-        file.addChoosableFileFilter(filter);
-        int a = file.showSaveDialog(null);
-
-        if (a == JFileChooser.APPROVE_OPTION) {
-            jTextField1.setText(file.getSelectedFile().getAbsolutePath());
-        }
-
-    }//GEN-LAST:event_jButton1ActionPerformed
-
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
 
         InsertTextAera_Main.setText("Request Date, Time, IP, Cache Result Code "
-                       + "Content Gateway Lengt, Request Method,"
-                       + " User Name, Server Name");
+            + "Content Gateway Lengt, Request Method,"
+            + " User Name, Server Name");
         MyThread thread = new MyThread(() -> {
             try {
 
@@ -235,8 +217,38 @@ public class MainForm extends javax.swing.JFrame {
 
         Thread t1 = new Thread(thread);
         t1.start();
-
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+
+        JFileChooser file = new JFileChooser();
+        file.setCurrentDirectory(new File("user.dir"));
+
+        FileNameExtensionFilter filter = new FileNameExtensionFilter("log", "txt");
+        file.addChoosableFileFilter(filter);
+        int a = file.showSaveDialog(null);
+
+        if (a == JFileChooser.APPROVE_OPTION) {
+            jTextField1.setText(file.getSelectedFile().getAbsolutePath());
+        }
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField1ActionPerformed
+
+    private void GeneralDataActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GeneralDataActionPerformed
+
+        //GeneralData.setText("Test Data"); Bu sistemin dilini dəyismək
+        //ucun istifadə edəcəyin bir yontəmdir.
+        //System.out.println(jTextField1.getText());
+        //Parser.lines(jTextField1.getText());
+        MyThread thread = new MyThread(() -> {
+            sf.GeneralButton();
+        });
+        Thread t1 = new Thread(thread);
+        t1.start();
+    }//GEN-LAST:event_GeneralDataActionPerformed
 
     public static void main(String[] args) {
 
@@ -271,6 +283,7 @@ public class MainForm extends javax.swing.JFrame {
     public static javax.swing.JTextArea InsertTextAera_Main;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
+    private javax.swing.JComboBox<String> jComboBox1;
     private com.toedter.calendar.JDateChooser jDateChooser1;
     private com.toedter.calendar.JDateChooser jDateChooser2;
     private javax.swing.JLabel jLabel1;

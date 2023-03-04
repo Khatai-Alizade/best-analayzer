@@ -28,7 +28,6 @@ public  class Connections {
 	
 	static BufferedReader bufferReader;
 
-	
 	//For conncet to MySQL 
       public static String USER = "groupone";
       public static String PASS = "Xmen1010.";
@@ -64,6 +63,7 @@ public  class Connections {
 	//For conncet to log file(s)
 	public static BufferedReader connectLogFile(String filePath) throws FileNotFoundException {
 		//"/home/adminx/Desktop/logs/Java/Squid logs/access-2015-12-04.log"
+                System.out.println("Bura Connection.connect Log file "+filePath);
 		FileReader fr = new FileReader(filePath);
 		 bufferReader = new BufferedReader(fr);
 

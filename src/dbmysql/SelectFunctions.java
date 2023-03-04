@@ -24,6 +24,10 @@ public class SelectFunctions {
     public static List<String> result3 = new ArrayList<String>();
     public static List<String> result4 = new ArrayList<String>();
     
+   
+    
+    
+    
     public void GeneralButton() {
 
         //Ay cədvəlləri və onlarda olan məlumatin həcmi       
@@ -39,6 +43,8 @@ public class SelectFunctions {
                 textArea1.append(sf.resultMonth.get(i) + "  ");
                 textArea1.append(sf.result1.get(i) + "  Mb");
                 textArea1.append(("\n"));
+           
+            
             }
             sf.result1.clear();
 

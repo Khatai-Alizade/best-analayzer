@@ -2,162 +2,163 @@ package util;
 
 public class oneLineLog {
 
-	protected static String oneline;
+    protected static String oneline;
 
-	String timeStampUTC;			 // 1
-	String reguestProsessingTime;	 // 2
-	String IP; 						 // 3
-	String cacheResultCode;			 // 4
-	String contentGatewayLengt;  	 // 5
-	String clientRequestMethod; 	 // 6
-	String proxyHierarchyRoute; 	 // 7
-	String clientUserName; 			 // 8
-	String serverName; 				 // 9
-	public static String getOneline() {
-		return oneline;
-	}
+    String timeStampUTC;			 // 1
+    String reguestProsessingTime;            // 2
+    String IP; 				 // 3
+    String cacheResultCode;			 // 4
+    String contentGatewayLengt;              // 5
+    String clientRequestMethod;              // 6
+    String proxyHierarchyRoute;              // 7
+    String clientUserName; 			 // 8
+    String serverName; 			 // 9
 
-	public static void setOneline(String oneline) {
-		oneLineLog.oneline = oneline;
-	}
+    public static String getOneline() {
+        return oneline;
+    }
 
-	public String getTimeStampUTC() {
-		return timeStampUTC;
-	}
+    public static void setOneline(String oneline) {
+        oneLineLog.oneline = oneline;
+    }
 
-	public void setTimeStampUTC(String timeStampUTC) {
-		this.timeStampUTC = timeStampUTC;
-	}
+    public String getTimeStampUTC() {
+        return timeStampUTC;
+    }
 
-	public String getContentGatewayLengt() {
-		return contentGatewayLengt;
-	}
+    public void setTimeStampUTC(String timeStampUTC) {
+        this.timeStampUTC = timeStampUTC;
+    }
 
-	public void setContentGatewayLengt(String contentGatewayLengt) {
-		this.contentGatewayLengt = contentGatewayLengt;
-	}
+    public String getContentGatewayLengt() {
+        return contentGatewayLengt;
+    }
 
-	public String getServerName() {
-		return serverName;
-	}
+    public void setContentGatewayLengt(String contentGatewayLengt) {
+        this.contentGatewayLengt = contentGatewayLengt;
+    }
 
-	public void setServerName(String serverName) {
-		this.serverName = serverName;
-	}
+    public String getServerName() {
+        return serverName;
+    }
 
-	String proxyResponseContentType; // 10
+    public void setServerName(String serverName) {
+        this.serverName = serverName;
+    }
 
-	String clientRequestDate;
-	String clientRequestTime;
+    String proxyResponseContentType; // 10
 
-	public oneLineLog() {
-		super();
-	}
+    String clientRequestDate;
+    String clientRequestTime;
 
-	public oneLineLog(String timeStampUTC, String reguestProsessingTime, String IP, String cacheResultCode,
-			String contentGatewayLengt, String clientRequestMethod, String proxyHierarchyRoute, String clientUserName,
-			String serverName, String proxyResponseContentType) {
-		super();
-		this.timeStampUTC = timeStampUTC;
-		this.clientRequestDate = clientRequestDate;
-		this.clientRequestTime = clientRequestTime;
-		this.reguestProsessingTime = reguestProsessingTime;
-		this.IP = IP;
-		this.cacheResultCode = cacheResultCode;
-		this.contentGatewayLengt = contentGatewayLengt;
-		this.clientRequestMethod = clientRequestMethod;
-		this.serverName = serverName;
-		this.clientUserName = clientUserName;
-		this.proxyHierarchyRoute = proxyHierarchyRoute;
-		this.proxyResponseContentType = proxyResponseContentType;
-	}
+    public oneLineLog() {
+        super();
+    }
 
-	public String getClientRequestDate() {
-		return clientRequestDate;
-	}
+    public oneLineLog(String timeStampUTC, String reguestProsessingTime, String IP, String cacheResultCode,
+                   String contentGatewayLengt, String clientRequestMethod, String proxyHierarchyRoute, String clientUserName,
+                   String serverName, String proxyResponseContentType) {
+        super();
+        this.timeStampUTC = timeStampUTC;
+        this.clientRequestDate = clientRequestDate;
+        this.clientRequestTime = clientRequestTime;
+        this.reguestProsessingTime = reguestProsessingTime;
+        this.IP = IP;
+        this.cacheResultCode = cacheResultCode;
+        this.contentGatewayLengt = contentGatewayLengt;
+        this.clientRequestMethod = clientRequestMethod;
+        this.serverName = serverName;
+        this.clientUserName = clientUserName;
+        this.proxyHierarchyRoute = proxyHierarchyRoute;
+        this.proxyResponseContentType = proxyResponseContentType;
+    }
 
-	public void setClientRequestDate(String clientRequestDate) {
-		this.clientRequestDate = clientRequestDate;
-	}
+    public String getClientRequestDate() {
+        return clientRequestDate;
+    }
 
-	public String getClientRequestTime() {
-		return clientRequestTime;
-	}
+    public void setClientRequestDate(String clientRequestDate) {
+        this.clientRequestDate = clientRequestDate;
+    }
 
-	public void setClientRequestTime(String clientRequestTime) {
-		this.clientRequestTime = clientRequestTime;
-	}
+    public String getClientRequestTime() {
+        return clientRequestTime;
+    }
 
-	public String getReguestProsessingTime() {
-		return reguestProsessingTime;
-	}
+    public void setClientRequestTime(String clientRequestTime) {
+        this.clientRequestTime = clientRequestTime;
+    }
 
-	public void setReguestProsessingTime(String reguestProsessingTime) {
-		this.reguestProsessingTime = reguestProsessingTime;
-	}
+    public String getReguestProsessingTime() {
+        return reguestProsessingTime;
+    }
 
-	public String getIP() {
-		return IP;
-	}
+    public void setReguestProsessingTime(String reguestProsessingTime) {
+        this.reguestProsessingTime = reguestProsessingTime;
+    }
 
-	public void setIP(String iP) {
-		IP = iP;
-	}
+    public String getIP() {
+        return IP;
+    }
 
-	public String getCacheResultCode() {
-		return cacheResultCode;
-	}
+    public void setIP(String iP) {
+        IP = iP;
+    }
 
-	public void setCacheResultCode(String cacheResultCode) {
-		this.cacheResultCode = cacheResultCode;
-	}
+    public String getCacheResultCode() {
+        return cacheResultCode;
+    }
 
-	public String getContentGatewayWhitBayt() {
-		return contentGatewayLengt;
-	}
+    public void setCacheResultCode(String cacheResultCode) {
+        this.cacheResultCode = cacheResultCode;
+    }
 
-	public void setContentGatewayWhitBayt(String contentGatewayLengt) {
-		this.contentGatewayLengt = contentGatewayLengt;
-	}
+    public String getContentGatewayWhitBayt() {
+        return contentGatewayLengt;
+    }
 
-	public String getClientRequestMethod() {
-		return clientRequestMethod;
-	}
+    public void setContentGatewayWhitBayt(String contentGatewayLengt) {
+        this.contentGatewayLengt = contentGatewayLengt;
+    }
 
-	public void setClientRequestMethod(String clientRequestMethod) {
-		this.clientRequestMethod = clientRequestMethod;
-	}
+    public String getClientRequestMethod() {
+        return clientRequestMethod;
+    }
 
-	public String getHostName() {
-		return serverName;
-	}
+    public void setClientRequestMethod(String clientRequestMethod) {
+        this.clientRequestMethod = clientRequestMethod;
+    }
 
-	public void setHostName(String serverName) {
-		this.serverName = serverName;
-	}
+    public String getHostName() {
+        return serverName;
+    }
 
-	public String getClientUserName() {
-		return clientUserName;
-	}
+    public void setHostName(String serverName) {
+        this.serverName = serverName;
+    }
 
-	public void setClientUserName(String clientUserName) {
-		this.clientUserName = clientUserName;
-	}
+    public String getClientUserName() {
+        return clientUserName;
+    }
 
-	public String getProxyHierarchyRoute() {
-		return proxyHierarchyRoute;
-	}
+    public void setClientUserName(String clientUserName) {
+        this.clientUserName = clientUserName;
+    }
 
-	public void setProxyHierarchyRoute(String proxyHierarchyRoute) {
-		this.proxyHierarchyRoute = proxyHierarchyRoute;
-	}
+    public String getProxyHierarchyRoute() {
+        return proxyHierarchyRoute;
+    }
 
-	public String getProxyResponseContentType() {
-		return proxyResponseContentType;
-	}
+    public void setProxyHierarchyRoute(String proxyHierarchyRoute) {
+        this.proxyHierarchyRoute = proxyHierarchyRoute;
+    }
 
-	public void setProxyResponseContentType(String proxyResponseContentType) {
-		this.proxyResponseContentType = proxyResponseContentType;
-	}
+    public String getProxyResponseContentType() {
+        return proxyResponseContentType;
+    }
+
+    public void setProxyResponseContentType(String proxyResponseContentType) {
+        this.proxyResponseContentType = proxyResponseContentType;
+    }
 
 }
